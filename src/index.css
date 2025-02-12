@@ -1,0 +1,229 @@
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* App styles */
+.app-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    min-height: 100vh;
+    background-color: #F8F9FA;
+}
+
+.app-content {
+    width: 100%;
+    max-width: 42rem;
+    text-align: center;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+/* TermSearch styles */
+.search-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-field {
+    width: 100%;
+}
+
+/* LanguageSelector styles */
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+}
+
+.language-button {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #CED4DA;
+    background: #F8F9FA;
+    color: #343A40;
+    cursor: pointer;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.language-button.active {
+    background: #007BFF;
+    color: #F8F9FA;
+    border-color: #007BFF;
+}
+
+.language-button.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* TermDetails styles */
+.term-details {
+    padding: 1.5rem;
+    background: #F8F9FA;
+    border: 1px solid #CED4DA;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.term-image {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 1.5rem;
+    display: block;
+    border-radius: 4px;
+}
+
+.term-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343A40;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.term-translations {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: #FFFFFF;
+    border-radius: 4px;
+    border: 1px solid #E9ECEF;
+}
+
+.term-latin {
+    color: #495057;
+    margin: 0;
+}
+
+.term-description {
+    color: #343A40;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+}
+
+/* Tablet uchun (768px dan yuqori) */
+@media (min-width: 768px) {
+    .app-content {
+        padding: 1.5rem;
+    }
+
+    .language-selector {
+        gap: 0.5rem;
+    }
+
+    .language-button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    .search-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .term-title {
+        font-size: 1.5rem;
+    }
+
+    .term-description {
+        font-size: 1rem;
+    }
+}
+
+/* Desktop uchun (1024px dan yuqori) */
+@media (min-width: 1024px) {
+    .app-content {
+        padding: 2rem;
+    }
+
+    .language-selector {
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .term-details {
+        padding: 1.5rem;
+    }
+}
+
+/* Katta ekranlar uchun (1280px dan yuqori) */
+@media (min-width: 1280px) {
+    .app-content {
+        max-width: 48rem;
+    }
+}
+
+.error-message {
+    color: #DC3545;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    text-align: left;
+    grid-column: 1 / -1; /* Error xabari ikkala ustun bo'ylab joylashadi */
+}
+
+.admin-page {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.submit-button {
+    margin-top: 1rem !important;
+}
+
+.success-message {
+    color: #28A745;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background: #d4edda;
+    margin-top: 1rem;
+}
+
+.existing-terms {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #CED4DA;
+}
+
+.delete-button {
+    margin-top: 1rem !important;
+    width: 100%;
+}
+
+.existing-terms h2 {
+    margin-bottom: 1rem;
+    color: #343A40;
+    font-size: 1.25rem;
+}
