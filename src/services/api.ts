@@ -1,6 +1,6 @@
 import { Term } from "../types";
 
-const API_URL = 'http://localhost:3000/api';
+const API_URL = 'http://185.171.81.159:3000/api';
 
 export const termApi = {
     async create(data: { title: string }): Promise<Term> {
